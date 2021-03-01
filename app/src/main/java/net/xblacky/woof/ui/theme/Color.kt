@@ -13,14 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package net.xblacky.woof.ui.theme
 
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Shapes
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
 
-val shapes = Shapes(
-    small = RoundedCornerShape(4.dp),
-    medium = RoundedCornerShape(4.dp),
-    large = RoundedCornerShape(0.dp)
-)
+val purple200 = Color(0xFFBB86FC)
+val purple500 = Color(0xFF6200EE)
+val purple700 = Color(0xFF3700B3)
+val teal200 = Color(0xFF03DAC5)
+
+
+val lightRed = Color(red = 255, green = 95, blue = 80)
+val lightCardBackground = Color(red = 255, blue = 255, green = 255)
+val lightBackground = Color(red = 242, green = 242, blue = 242)
+val lightTextPrimary = Color(red = 46, green = 45, blue = 43)
+val lightTextSecondary = Color(red = 182, green = 182, blue = 182)
