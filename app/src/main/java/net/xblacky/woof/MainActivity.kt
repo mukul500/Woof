@@ -21,9 +21,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import net.xblacky.woof.data.FakeData
-import net.xblacky.woof.ui.Details
-import net.xblacky.woof.ui.Home
 import net.xblacky.woof.ui.WoofMain
 import net.xblacky.woof.ui.theme.MyTheme
 
