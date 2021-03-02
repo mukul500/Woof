@@ -10,7 +10,7 @@ import net.xblacky.woof.data.FakeData
 import net.xblacky.woof.navigation.Screen
 
 @Composable
-fun WoofMain(){
+fun WoofMain() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = Screen.Home.route) {
         composable(Screen.Home.route) {
