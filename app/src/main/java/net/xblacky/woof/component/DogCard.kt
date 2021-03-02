@@ -1,6 +1,7 @@
 package net.xblacky.woof.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -8,6 +9,8 @@ import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -17,23 +20,22 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.woof.R
-import net.xblacky.woof.data.FakeData
 import net.xblacky.woof.model.Dog
 import net.xblacky.woof.ui.theme.typography
 
 
 @Composable
-fun DogCard(dogObj: Dog) {
+fun DogCard(dogObj: Dog, onItemClicked: (dog: Dog) -> Unit) {
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(30.dp, 8.dp, 30.dp, 8.dp)
-            .clip(RoundedCornerShape(18.dp)),
+            .clip(RoundedCornerShape(18.dp))
+            .clickable(onClick = { onItemClicked(dogObj) }),
         elevation = 0.dp,
         backgroundColor = MaterialTheme.colors.primaryVariant
     ) {
@@ -82,12 +84,20 @@ fun DogCard(dogObj: Dog) {
                     .padding(0.dp, 0.dp, 8.dp, 0.dp),
                 horizontalAlignment = Alignment.End
             ) {
+                val favouriteState = remember { mutableStateOf(false) }
+                val drawable =
+                    if (favouriteState.value) painterResource(id = R.drawable.ic_heart_fill) else painterResource(
+                        id = R.drawable.ic_heart_empty
+                    )
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_heart_empty),
+                    painter = drawable,
                     contentDescription = "",
                     tint = MaterialTheme.colors.primary,
                     modifier = Modifier
                         .size(24.dp)
+                        .clickable(onClick = {
+                            favouriteState.value = !favouriteState.value
+                        })
                 )
             }
 

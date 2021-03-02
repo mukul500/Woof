@@ -10,23 +10,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.woof.R
-import net.xblacky.woof.data.FakeData
+import net.xblacky.woof.model.Dog
 import net.xblacky.woof.ui.theme.typography
 
-@Preview
 @Composable
-fun DogDetailTop() {
-
-    val dogObj = FakeData.dogList[1]
+fun DogDetailTop(dogObj: Dog) {
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(24.dp)
+            .padding(24.dp),
     ) {
         Column {
             Text(
@@ -51,8 +47,12 @@ fun DogDetailTop() {
                 .fillMaxWidth()
         ) {
 
+            val drawable =
+                if (dogObj.gender == "Male") painterResource(id = R.drawable.ic_male) else painterResource(
+                    id = R.drawable.ic_female
+                )
             Icon(
-                painter = painterResource(id = R.drawable.ic_male),
+                painter = drawable,
                 contentDescription = "",
                 modifier = Modifier.size(24.dp),
                 tint = MaterialTheme.colors.primary

@@ -18,7 +18,7 @@ object FakeData {
             "Golden Retriver"
         ),
         Dog(
-            0,
+            1,
             "Ekko",
             1.2,
             "Male",
@@ -30,7 +30,7 @@ object FakeData {
             "Beagle"
         ),
         Dog(
-            0,
+            2,
             "Max",
             4.5,
             "Male",
@@ -42,7 +42,7 @@ object FakeData {
             "Pug"
         ),
         Dog(
-            0,
+            3,
             "Skooby Doo",
             2.0,
             "Female",
@@ -53,7 +53,7 @@ object FakeData {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             "Boston"
         ), Dog(
-            0,
+            4,
             "Sparky",
             3.5,
             "Male",
@@ -65,7 +65,7 @@ object FakeData {
             "Golden Retriver"
         ),
         Dog(
-            0,
+            5,
             "Ekko",
             3.5,
             "Male",
@@ -77,7 +77,7 @@ object FakeData {
             "Beagle"
         ),
         Dog(
-            0,
+            6,
             "Max",
             3.5,
             "Female",
@@ -89,7 +89,7 @@ object FakeData {
             "Pug"
         ),
         Dog(
-            0,
+            7,
             "Skooby Doo",
             4.5,
             "Male",
@@ -100,7 +100,7 @@ object FakeData {
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
             "Boston"
         ), Dog(
-            0,
+            8,
             "Sparky",
             1.2,
             "Male",
@@ -112,7 +112,7 @@ object FakeData {
             "Golden Retriver"
         ),
         Dog(
-            0,
+            9,
             "Ekko",
             3.5,
             "Female",
@@ -124,7 +124,7 @@ object FakeData {
             "Beagle"
         ),
         Dog(
-            0,
+            10,
             "Max",
             3.5,
             "Male",
@@ -136,7 +136,7 @@ object FakeData {
             "Pug"
         ),
         Dog(
-            0,
+            11,
             "Skooby Doo",
             3.5,
             "Female",

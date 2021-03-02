@@ -18,21 +18,12 @@ package net.xblacky.woof
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import net.xblacky.woof.component.DogBottomCard
-import net.xblacky.woof.component.DogCard
-import net.xblacky.woof.component.DogDetailTop
-import net.xblacky.woof.component.TopBar
 import net.xblacky.woof.data.FakeData
+import net.xblacky.woof.ui.Details
+import net.xblacky.woof.ui.Home
+import net.xblacky.woof.ui.WoofMain
 import net.xblacky.woof.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
@@ -40,39 +31,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                MyApp()
+                WoofMain()
             }
         }
     }
 }
 
 // Start building your app here!
-@Composable
-fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        LazyColumn(modifier = Modifier.fillMaxHeight()) {
 
-            item {
-                DogDetailTop()
-            }
-            item{
-                DogBottomCard()
-            }
-        }
-    }
-}
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
-    MyTheme(darkTheme = true) {
-        MyApp()
-    }
-}
-
-@Composable
-fun DarkPreview() {
-    MyTheme(darkTheme = true) {
-        MyApp()
+    MyTheme(darkTheme = false) {
+        WoofMain()
     }
 }

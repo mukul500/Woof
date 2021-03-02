@@ -14,18 +14,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.woof.R
-import net.xblacky.woof.data.FakeData
+import net.xblacky.woof.model.Dog
 import net.xblacky.woof.ui.theme.typography
 
-
-@Preview
 @Composable
-fun DogBottomCard() {
-    val dogObj = FakeData.dogList[3]
+fun DogDetailBottom(dogObj: Dog) {
 
     Column(modifier = Modifier.fillMaxHeight()) {
         Column(
@@ -34,7 +30,7 @@ fun DogBottomCard() {
             horizontalAlignment = Alignment.End
         ) {
             Image(
-                painter = painterResource(id = R.drawable.orange_dog),
+                painter = painterResource(id = dogObj.largeImage),
                 contentDescription = "",
                 modifier = Modifier
                     .size(340.dp)
