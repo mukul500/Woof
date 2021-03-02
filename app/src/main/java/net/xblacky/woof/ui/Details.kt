@@ -7,7 +7,8 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import net.xblacky.woof.component.*
+import net.xblacky.woof.component.DogDetailBottom
+import net.xblacky.woof.component.DogDetailTop
 import net.xblacky.woof.data.FakeData
 
 @Composable

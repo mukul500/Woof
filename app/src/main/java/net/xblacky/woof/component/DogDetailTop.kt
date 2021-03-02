@@ -22,7 +22,7 @@ fun DogDetailTop(dogObj: Dog) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(24.dp),
+            .padding(24.dp, 36.dp, 24.dp, 0.dp),
     ) {
         Column {
             Text(
