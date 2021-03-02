@@ -21,7 +21,7 @@ import net.xblacky.woof.ui.theme.typography
 @Composable
 fun DogDetailTop() {
 
-    val dogObj = FakeData.dogList[0]
+    val dogObj = FakeData.dogList[1]
 
     Row(
         modifier = Modifier

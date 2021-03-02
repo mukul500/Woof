@@ -49,12 +49,13 @@ class MainActivity : AppCompatActivity() {
 // Start building your app here!
 @Composable
 fun MyApp() {
-    Surface(color = MaterialTheme.colors.primaryVariant) {
+    Surface(color = MaterialTheme.colors.background) {
         LazyColumn(modifier = Modifier.fillMaxHeight()) {
+
             item {
                 DogDetailTop()
             }
-            item {
+            item{
                 DogBottomCard()
             }
         }

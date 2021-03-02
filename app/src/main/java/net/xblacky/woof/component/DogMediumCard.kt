@@ -25,7 +25,7 @@ import net.xblacky.woof.ui.theme.typography
 @Preview
 @Composable
 fun DogBottomCard() {
-    val dogObj = FakeData.dogList[0]
+    val dogObj = FakeData.dogList[3]
 
     Column(modifier = Modifier.fillMaxHeight()) {
         Column(
@@ -34,10 +34,10 @@ fun DogBottomCard() {
             horizontalAlignment = Alignment.End
         ) {
             Image(
-                painter = painterResource(id = R.drawable.blue_dog),
+                painter = painterResource(id = R.drawable.orange_dog),
                 contentDescription = "",
                 modifier = Modifier
-                    .size(300.dp, 346.dp)
+                    .size(340.dp)
             )
         }
 
