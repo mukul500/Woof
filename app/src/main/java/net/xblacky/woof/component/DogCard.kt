@@ -1,3 +1,18 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package net.xblacky.woof.component
 
 import androidx.compose.foundation.Image
@@ -32,7 +47,6 @@ import com.example.woof.R
 import net.xblacky.woof.model.Dog
 import net.xblacky.woof.ui.theme.typography
 
-
 @Composable
 fun DogCard(dogObj: Dog, onItemClicked: (dog: Dog) -> Unit) {
 
@@ -63,11 +77,9 @@ fun DogCard(dogObj: Dog, onItemClicked: (dog: Dog) -> Unit) {
             )
             Spacer(modifier = Modifier.width(16.dp))
 
-
             Column {
                 DogName(dogName = dogObj.name)
                 DogBreed(breed = dogObj.breed)
-
 
                 Text(
                     text = buildString {
@@ -80,8 +92,6 @@ fun DogCard(dogObj: Dog, onItemClicked: (dog: Dog) -> Unit) {
                 )
 
                 DogLocation(location = dogObj.location)
-
-
             }
 
             Column(
@@ -101,12 +111,13 @@ fun DogCard(dogObj: Dog, onItemClicked: (dog: Dog) -> Unit) {
                     tint = MaterialTheme.colors.primary,
                     modifier = Modifier
                         .size(24.dp)
-                        .clickable(onClick = {
-                            favouriteState.value = !favouriteState.value
-                        })
+                        .clickable(
+                            onClick = {
+                                favouriteState.value = !favouriteState.value
+                            }
+                        )
                 )
             }
-
         }
     }
 }
@@ -152,6 +163,5 @@ fun DogLocation(location: String) {
             textAlign = TextAlign.Center
 
         )
-
     }
 }

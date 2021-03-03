@@ -22,7 +22,6 @@ val purple500 = Color(0xFF6200EE)
 val purple700 = Color(0xFF3700B3)
 val teal200 = Color(0xFF03DAC5)
 
-
 val lightRed = Color(red = 255, green = 95, blue = 80)
 val lightCardBackground = Color(red = 255, blue = 255, green = 255)
 val lightBackground = Color(red = 242, green = 242, blue = 242)
